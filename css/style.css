@@ -201,11 +201,6 @@ html {
   position: relative;
 }
 
-.slider-track {
-  display: inline-flex;
-  gap: 20px;
-}
-
 .event-card {
   min-width: 40rem;
   height: auto;

@@ -2,9 +2,9 @@
   html {
     font-size: 62%;
   }
- .hero-sec {
- 
-  padding-bottom: 18rem;}
+  .hero-sec {
+    padding-bottom: 18rem;
+  }
   .nav-list {
     display: none;
     position: absolute;
@@ -82,7 +82,15 @@
   }
   .category-slider {
     gap: 15rem;
-
+  }
+  .event-card {
+    min-width: 20rem;
+  }
+  .event-card img {
+    width: 20rem;
+    height: 150px;
+    object-fit: cover;
+  }
 }
 @media (max-width: 75em) {
 }
