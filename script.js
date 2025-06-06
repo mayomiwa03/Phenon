@@ -1,18 +1,26 @@
-// category slider
-const slider = document.getElementById("autoScrollSlider");
+// category & Event slider
+const eventSlider = document.getElementById("eventSlider");
+const categorySlider = document.getElementById("categorySlider");
 
-function autoScroll() {
-  // Scroll 1px to the right each time
-  slider.scrollLeft += 1;
-
-  // If reached end, go back to start
-  if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-    slider.scrollLeft = 0;
+setInterval(() => {
+  categorySlider.scrollLeft += 1;
+  if (
+    categorySlider.scrollLeft >=
+    categorySlider.scrollWidth - categorySlider.clientWidth
+  ) {
+    categorySlider.scrollLeft = 0;
   }
-}
+}, 20);
 
-// Set interval speed (lower = faster)
-const scrollInterval = setInterval(autoScroll, 20);
+setInterval(() => {
+  eventSlider.scrollLeft += 1;
+  if (
+    eventSlider.scrollLeft >=
+    eventSlider.scrollWidth - eventSlider.clientWidth
+  ) {
+    eventSlider.scrollLeft = 0;
+  }
+}, 30);
 
 // Hamburger menu toggle
 ("use strict");
