@@ -114,6 +114,13 @@ html {
   transform: skewX(15deg);
 }
 /* Category Section */
+#eventSlider,
+#categorySlider {
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
 .cat-sec,
 .events-sec {
   margin: 5rem auto;
@@ -173,6 +180,10 @@ html {
   color: black;
 }
 /* Events-sec */
+
+.event-t {
+  padding-left: 2rem;
+}
 .event-slider {
   display: flex;
   overflow-x: auto;
@@ -184,10 +195,20 @@ html {
 .event-slider::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome */
 }
+#eventSlider {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.slider-track {
+  display: inline-flex;
+  gap: 20px;
+}
 
 .event-card {
   min-width: 40rem;
-  height: 30rem;
+  height: auto;
   background: white;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

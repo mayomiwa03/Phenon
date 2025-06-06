@@ -2,22 +2,23 @@
 const eventSlider = document.getElementById("eventSlider");
 const categorySlider = document.getElementById("categorySlider");
 
+// ✅ Duplicate event cards to make seamless scroll
+eventSlider.innerHTML += eventSlider.innerHTML;
+categorySlider.innerHTML += categorySlider.innerHTML;
+
 setInterval(() => {
   categorySlider.scrollLeft += 1;
-  if (
-    categorySlider.scrollLeft >=
-    categorySlider.scrollWidth - categorySlider.clientWidth
-  ) {
+
+  if (categorySlider.scrollLeft >= categorySlider.scrollWidth / 2) {
     categorySlider.scrollLeft = 0;
   }
 }, 20);
 
 setInterval(() => {
   eventSlider.scrollLeft += 1;
-  if (
-    eventSlider.scrollLeft >=
-    eventSlider.scrollWidth - eventSlider.clientWidth
-  ) {
+
+  // ✅ Reset halfway to create loop (not at the end)
+  if (eventSlider.scrollLeft >= eventSlider.scrollWidth / 2) {
     eventSlider.scrollLeft = 0;
   }
 }, 30);
